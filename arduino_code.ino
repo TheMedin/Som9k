@@ -5,6 +5,7 @@ const int buttonPin = 8;
 const int redLedPin = 12;
 const int yellowLedPin = 11;
 const int greenLedPin = 10;
+const int openLedPin = 13;
 
 int buttonState = 0;
 int ledState = 0;
@@ -63,8 +64,10 @@ void loop()
   Serial.println(sensor);
   if (sensor > threshold) {
     value = 100;
+    digitalWrite(openLedPin, HIGH);
   } else {
     value = 0;
+    digitalWrite(openLedPin, LOW);
   }
   angle = map(value, 0, 1023, 0, 180);
   //Serial.println(angle);
