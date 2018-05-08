@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.1">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9,20 +9,6 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -158,7 +144,7 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="supply1" urn="urn:adsk.eagle:library:371">
+<library name="supply1">
 <description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
  GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
  Please keep in mind, that these devices are necessary for the
@@ -169,12 +155,12 @@
 <packages>
 </packages>
 <symbols>
-<symbol name="GND" urn="urn:adsk.eagle:symbol:26925/1" library_version="1">
+<symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
+<symbol name="VCC">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
@@ -182,7 +168,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
+<deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
@@ -195,7 +181,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
+<deviceset name="VCC" prefix="P+">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="VCC" symbol="VCC" x="0" y="0"/>
@@ -626,11 +612,11 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </deviceset>
 </devicesets>
 </library>
-<library name="con-molex" urn="urn:adsk.eagle:library:165">
+<library name="con-molex">
 <description>&lt;b&gt;Molex Connectors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="22-23-2061" library_version="2">
+<package name="22-23-2061">
 <description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 6 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232061_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-7.62" y1="3.175" x2="7.62" y2="3.175" width="0.254" layer="21"/>
 <wire x1="7.62" y1="3.175" x2="7.62" y2="1.27" width="0.254" layer="21"/>
@@ -648,7 +634,7 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <text x="-7.62" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-7.62" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="22-23-2081" library_version="2">
+<package name="22-23-2081">
 <description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 8 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232081_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-10.16" y1="3.175" x2="10.16" y2="3.175" width="0.254" layer="21"/>
 <wire x1="10.16" y1="3.175" x2="10.16" y2="1.27" width="0.254" layer="21"/>
@@ -670,20 +656,20 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </package>
 </packages>
 <symbols>
-<symbol name="MV" library_version="2">
+<symbol name="MV">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
-<symbol name="M" library_version="2">
+<symbol name="M">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="22-23-2061" prefix="X" uservalue="yes" library_version="2">
+<deviceset name="22-23-2061" prefix="X" uservalue="yes">
 <description>.100" (2.54mm) Center Header - 6 Pin</description>
 <gates>
 <gate name="-1" symbol="MV" x="0" y="5.08" addlevel="always" swaplevel="1"/>
@@ -714,7 +700,7 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </device>
 </devices>
 </deviceset>
-<deviceset name="22-23-2081" prefix="X" library_version="2">
+<deviceset name="22-23-2081" prefix="X">
 <description>.100" (2.54mm) Center Header - 8 Pin</description>
 <gates>
 <gate name="-1" symbol="MV" x="0" y="7.62" addlevel="always" swaplevel="1"/>
@@ -761,8 +747,8 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </class>
 </classes>
 <parts>
-<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="5V"/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="P+4" library="supply1" deviceset="VCC" device="" value="5V"/>
 <part name="S1" library="fab" deviceset="6MM_SWITCH" device="6MM_SWITCH"/>
 <part name="S4" library="fab" deviceset="6MM_SWITCH" device="6MM_SWITCH"/>
 <part name="U$1" library="fab" deviceset="LED" device="FAB1206"/>
@@ -771,21 +757,31 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <part name="R1" library="fab" deviceset="RES-US" device="1206FAB"/>
 <part name="R2" library="fab" deviceset="RES-US" device="1206FAB"/>
 <part name="R3" library="fab" deviceset="RES-US" device="1206FAB"/>
-<part name="A1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2061" device=""/>
-<part name="D1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2081" device=""/>
-<part name="D2" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2081" device=""/>
-<part name="A2" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2061" device=""/>
-<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="5V"/>
-<part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="5V"/>
-<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="A1" library="con-molex" deviceset="22-23-2061" device=""/>
+<part name="D1" library="con-molex" deviceset="22-23-2081" device=""/>
+<part name="D2" library="con-molex" deviceset="22-23-2081" device=""/>
+<part name="A2" library="con-molex" deviceset="22-23-2061" device=""/>
+<part name="P+2" library="supply1" deviceset="VCC" device="" value="5V"/>
+<part name="P+3" library="supply1" deviceset="VCC" device="" value="5V"/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="J1" library="fab" deviceset="TERM-1X02" device="-FABLAB"/>
 <part name="U$4" library="fab" deviceset="TERM-1X03" device="'-FABLAB'"/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="5V"/>
-<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" deviceset="VCC" device="" value="5V"/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
+<sheet>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
 <sheet>
 <plain>
 </plain>
@@ -996,44 +992,6 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="101,1,88.9,86.36,A1-1,S,,,,"/>
-<approved hash="101,1,88.9,83.82,A1-2,S,,,,"/>
-<approved hash="101,1,88.9,81.28,A1-3,S,,,,"/>
-<approved hash="101,1,88.9,78.74,A1-4,S,,,,"/>
-<approved hash="101,1,88.9,76.2,A1-5,S,,,,"/>
-<approved hash="101,1,-2.54,76.2,D1-3,S,,,,"/>
-<approved hash="101,1,-2.54,78.74,D1-4,S,,,,"/>
-<approved hash="101,1,-2.54,81.28,D1-5,S,,,,"/>
-<approved hash="101,1,-2.54,83.82,D1-6,S,,,,"/>
-<approved hash="101,1,-2.54,86.36,D1-7,S,,,,"/>
-<approved hash="101,1,-2.54,88.9,D1-8,S,,,,"/>
-<approved hash="101,1,-2.54,45.72,D2-1,S,,,,"/>
-<approved hash="101,1,-2.54,48.26,D2-2,S,,,,"/>
-<approved hash="101,1,-2.54,50.8,D2-3,S,,,,"/>
-<approved hash="101,1,88.9,68.58,A2-1,S,,,,"/>
-<approved hash="101,1,88.9,66.04,A2-2,S,,,,"/>
-<approved hash="101,1,88.9,55.88,A2-6,S,,,,"/>
-<approved hash="113,1,25.6946,50.8,S1,,,,,"/>
-<approved hash="113,1,12.9946,50.8,S4,,,,,"/>
-<approved hash="113,1,14.1503,35.56,R1,,,,,"/>
-<approved hash="113,1,26.8503,35.56,R2,,,,,"/>
-<approved hash="113,1,44.6303,30.48,R3,,,,,"/>
-<approved hash="113,1,91.8334,86.36,A1,,,,,"/>
-<approved hash="113,1,91.8334,68.58,A2,,,,,"/>
-</errors>
 </schematic>
 </drawing>
-<compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports URNs for individual library
-assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
-</note>
-</compatibility>
 </eagle>
